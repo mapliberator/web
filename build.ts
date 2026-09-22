@@ -1,6 +1,7 @@
 /**
- * Builds mapliberator.com into dist/: the landing page (content/manifesto.md), the Portable Map
- * Archive specification, and the JSON Schemas at the URLs their `$id`s name. Plain HTML and one
+ * Builds mapliberator.com into dist/: the landing page (content/manifesto.md), the privacy policy
+ * (content/privacy.md), the Portable Map Archive specification, and the JSON Schemas at the URLs
+ * their `$id`s name. Plain HTML and one
  * stylesheet, no JavaScript; any static host can serve the output.
  *
  * The specification, its schemas and the icon live in the extension repository, which the build
@@ -182,7 +183,8 @@ ${body}
 <footer class="site-footer">
 <div class="container">
 <p>MapLiberator is <a href="${REPO}">open source</a> under the MIT license. The specification is
-licensed <a href="/spec/license/">CC BY 4.0</a>. This site sets no cookies and runs no analytics.</p>
+licensed <a href="/spec/license/">CC BY 4.0</a>. This site sets no cookies and runs no analytics.
+<a href="/privacy/">Privacy policy</a>.</p>
 <p>Gaia GPS, AllTrails and Strava are trademarks of their respective owners. MapLiberator is not
 affiliated with any of them.</p>
 </div>
@@ -301,6 +303,20 @@ ${html}
 	});
 }
 
+function privacy(): string {
+	const { html } = renderMarkdown(readFileSync(join(CONTENT_DIR, 'privacy.md'), 'utf8'));
+	return page({
+		path: '/privacy/',
+		title: 'MapLiberator privacy policy',
+		description: 'MapLiberator collects no data. Your exports go straight to your own computer.',
+		body: `<main class="container">
+<article class="prose">
+${html}
+</article>
+</main>`
+	});
+}
+
 function notFound(): string {
 	return page({
 		path: '/404.html',
@@ -346,6 +362,7 @@ export function buildSite(extensionDir: string, outDir = join(ROOT, 'dist')): st
 	write('index.html', home());
 	write('spec/index.html', spec(specDir, schemas));
 	write('spec/license/index.html', license(specDir));
+	write('privacy/index.html', privacy());
 	write('404.html', notFound());
 	for (const [name, path] of schemas) {
 		write(path, readFileSync(join(specDir, 'schemas', name)));

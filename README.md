@@ -9,7 +9,7 @@ npm run build        # writes the site to dist/
 npm test             # every mapliberator.com URL resolves, no broken links, no scripts
 ```
 
-`content/` holds the manifesto, the preface to the specification and the stylesheet. The
+`content/` holds the manifesto, the privacy policy, the preface to the specification and the stylesheet. The
 specification itself, its JSON Schemas and the icon live in the
 [extension repository](https://github.com/mapliberator/extension), where the schemas are generated
 from the exporter's own code. The build and the tests clone its `main` branch. Set
@@ -27,6 +27,7 @@ The build writes:
 | `/`                                       | `content/manifesto.md`               |
 | `/spec/`                                  | `spec/portable-map-archive-*.md`     |
 | `/spec/license/`                          | `spec/LICENSE.md`                    |
+| `/privacy/`                               | `content/privacy.md`                 |
 | `/spec/1.0-draft/schemas/*.json`          | `spec/schemas/`, each at its `$id`   |
 | `/style.css`, `/icon.png`, `/favicon.png` | `content/style.css`, `public/icons/` |
 
