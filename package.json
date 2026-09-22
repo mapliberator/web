@@ -1,0 +1,25 @@
+{
+	"name": "mapliberator-web",
+	"private": true,
+	"description": "mapliberator.com: the MapLiberator landing page and the Portable Map Archive specification.",
+	"license": "MIT",
+	"type": "module",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"build": "tsx build.ts",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit",
+		"format": "prettier --write .",
+		"lint": "prettier --check ."
+	},
+	"devDependencies": {
+		"@types/node": "^22.20.4",
+		"marked": "^18.0.13",
+		"prettier": "^3.9.8",
+		"tsx": "^4.23.15",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.11"
+	}
+}
