@@ -37,8 +37,11 @@ export const SITE_ORIGIN = 'https://mapliberator.com';
 
 /** Store listings. Leave a URL empty until the listing is live; its button then says so. */
 const STORES = [
-	{ browser: 'Chrome', url: '' },
-	{ browser: 'Firefox', url: '' }
+	{
+		browser: 'Chrome',
+		url: 'https://chromewebstore.google.com/detail/mapliberator/plnoenhfnocddemdalmenfnhgpmmfcjo'
+	},
+	{ browser: 'Firefox', url: '#' }
 ];
 
 interface Rendered {
