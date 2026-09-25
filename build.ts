@@ -41,7 +41,7 @@ const STORES = [
 		browser: 'Chrome',
 		url: 'https://chromewebstore.google.com/detail/mapliberator/plnoenhfnocddemdalmenfnhgpmmfcjo'
 	},
-	{ browser: 'Firefox', url: '#' }
+	{ browser: 'Firefox', url: 'https://addons.mozilla.org/en-US/firefox/addon/mapliberator' }
 ];
 
 interface Rendered {
