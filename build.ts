@@ -209,7 +209,7 @@ function storeButtons(): string {
 	return `<div class="install">
 ${buttons}
 </div>
-<p class="fine">Works with Gaia GPS and AllTrails, in Chrome, Edge, Brave and Firefox.${pending}</p>`;
+<p class="fine">Works with Gaia GPS, AllTrails and Strava, in Chrome, Edge, Brave and Firefox.${pending}</p>`;
 }
 
 const ARCHIVE_TREE = `mapliberator-gaiagps-2026-09-21.zip
