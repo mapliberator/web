@@ -188,7 +188,7 @@ ${body}
 <p>MapLiberator is <a href="${REPO}">open source</a> under the MIT license. The specification is
 licensed <a href="/spec/license/">CC BY 4.0</a>. This site sets no cookies and runs no analytics.
 <a href="/privacy/">Privacy policy</a>.</p>
-<p>Gaia GPS, AllTrails and Strava are trademarks of their respective owners. MapLiberator is not
+<p>Gaia GPS, AllTrails, Strava and Garmin Connect are trademarks of their respective owners. MapLiberator is not
 affiliated with any of them.</p>
 </div>
 </footer>
@@ -209,7 +209,7 @@ function storeButtons(): string {
 	return `<div class="install">
 ${buttons}
 </div>
-<p class="fine">Works with Gaia GPS, AllTrails and Strava, in Chrome, Edge, Brave and Firefox.${pending}</p>`;
+<p class="fine">Works with Gaia GPS, AllTrails, Strava and Garmin Connect, in Chrome, Edge, Brave and Firefox.${pending}</p>`;
 }
 
 const ARCHIVE_TREE = `mapliberator-gaiagps-2026-09-21.zip
